@@ -5,3 +5,4 @@
 
 from  .forum import *
 from .fallenark import *
+from .fallenark_tid import *
