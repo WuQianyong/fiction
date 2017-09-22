@@ -64,9 +64,9 @@ REDIRECT_ENABLED  = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'fiction.pipelines.FictionPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'fiction.pipelines.FictionPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -90,9 +90,13 @@ REDIRECT_ENABLED  = True
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
-# # redis-setting
-# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-#
-# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-#
-# REDIS_URL = 'redis://127.0.0.1:6379'
+# redis-setting
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+
+REDIS_URL = 'redis://127.0.0.1:6379'
+# 设置宽度优先
+DEPTH_PRIORITY = 1
+SCHEDULER_DISK_QUEUE = 'scrapy.squeue.PickleFifoDiskQueue'
+SCHEDULER_MEMORY_QUEUE = 'scrapy.squeue.FifoMemoryQueue'

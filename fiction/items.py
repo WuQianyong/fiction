@@ -6,6 +6,22 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy import Item,Field
+class FallenarkTitle(Item):
+    title=Field()
+    tid = Field()
+    category = Field()
+
+class FallenarkTid(Item):
+    tid = Field()
+    name=Field()
+    uid=Field()
+    t_time=Field()
+    page=Field()
+    floor = Field()
+    content=Field()
+
+
 
 
 class FictionItem(scrapy.Item):

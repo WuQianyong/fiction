@@ -37,7 +37,13 @@ url_key = 'fallenark:url:dict'
 class FallenarkSpider(Spider):
     name = 'fallenark_spider'
 
-    start_urls = ['http://bbs.fallenark.com/forum.php?mod=forumdisplay&fid=4&page=3&mobile=1']
+    start_urls = ['http://bbs.fallenark.com/forum.php?mod=forumdisplay&fid=54&mobile=1',
+                  'http://bbs.fallenark.com/forum.php?mod=forumdisplay&fid=138&mobile=1',
+                  'http://bbs.fallenark.com/forum.php?mod=forumdisplay&fid=139&mobile=1',
+                  'http://bbs.fallenark.com/forum.php?mod=forumdisplay&fid=134&mobile=1',
+                  'http://bbs.fallenark.com/forum.php?mod=forumdisplay&fid=95&mobile=1',
+                  'http://bbs.fallenark.com/forum.php?mod=forumdisplay&fid=135&mobile=1',
+                  'http://bbs.fallenark.com/forum.php?mod=forumdisplay&fid=148&mobile=1']
     host = 'http://bbs.fallenark.com'
 
     def start_requests(self):
